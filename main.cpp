@@ -1,15 +1,19 @@
 #include <iostream>
 using namespace std;
 
-void square(int input);
+void power(int base, int exponent);
 
 int main()
 {
     cout<<"GitHub Test"<<endl;
-    square(2);
+    power(3, 4);
     return 0;
 }
 
-void square(int input) {
-    cout << input*2 << endl;
+void power(int base, int exponent) {
+    int finalValue = base;
+    for (int i = 1; i < exponent; i++) {
+        finalValue = finalValue * base;
+    }
+    cout << finalValue << endl;
 }
